@@ -8,10 +8,6 @@ public class User {
 	private String name;
 	private Date DateHour;
 
-	public User() {
-
-	}
-
 	public User(String name, Date dateHour) {
 		super();
 		this.name = name;
@@ -36,7 +32,7 @@ public class User {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(DateHour, name);
+		return Objects.hash(name);
 	}
 
 	@Override
@@ -48,7 +44,7 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Objects.equals(DateHour, other.DateHour) && Objects.equals(name, other.name);
+		return Objects.equals(name, other.name);
 	}
 
 }
